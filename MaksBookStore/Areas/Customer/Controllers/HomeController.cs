@@ -8,8 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using MaksBookStore.Models.ViewModels;
 
-namespace MaksBookStore.Controllers
+namespace MaksBookStore.Area.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
