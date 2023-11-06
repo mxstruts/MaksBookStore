@@ -11,7 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MaksBooks.DataAccess.Repository;
 using MaksBookStore.DataAccess.Data;
+using MaksBooks.DataAccess.Repository.IRepository;
+
+
 
 namespace MaksBookStore
 {
@@ -34,6 +38,7 @@ namespace MaksBookStore
 
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
         }
 
