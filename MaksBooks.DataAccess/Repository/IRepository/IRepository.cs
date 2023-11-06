@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace MaksBooks.DataAccess.Repository.IRepository
 {
-    internal interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         T Get(int id);
 
