@@ -23,6 +23,14 @@ pseudocode - start > Stop
 9:35 - Added new default migration
 9:41 - Added new AdCategoryToDb migration
 
+2023/11/06
+
+6:15 Created new Category controller
+7:02 Added two new interfaces ISP_Call and IUnitOfWork
+7:25 Added font awesome support and stylized two buttons Delete and Edit
+7:56 Added Update and Delete options in controller
+
+
 Tests:
 
 Test 1 2023/10/30 10:16
