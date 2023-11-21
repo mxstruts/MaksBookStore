@@ -1,5 +1,6 @@
 # Bookstore MVC Project
 
+
 This is a simple MVC (Model-View-Controller) project for a bookstore application. The project is built using [C#, .NET5.0].
 
 # Maksym Shatylo
@@ -18,8 +19,6 @@ This is a simple MVC (Model-View-Controller) project for a bookstore application
 - Create, read, update, and delete (CRUD) operations for books.
 - Search and filter books by various criteria.
 - User authentication and authorization.
-- Shopping cart functionality.
-- Order history and checkout.
 
 ## Prerequisites
 
@@ -30,7 +29,4 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/yourusername/bookstore-mvc.git
