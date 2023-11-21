@@ -31,6 +31,10 @@ pseudocode - start > Stop
 7:56 Added Update and Delete options in controller
 
 
+2023/11/20
+7:00 Started part 3 with created a CRUD with CoverType
+8:47 added new migration : 20231106023938_AddCategoryToDb.cs
+
 Tests:
 
 Test 1 2023/10/30 10:16
