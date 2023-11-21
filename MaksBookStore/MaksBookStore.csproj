@@ -24,4 +24,8 @@
     <ProjectReference Include="..\MaksBooks.Utility\MaksBooks.Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\products\" />
+  </ItemGroup>
+
 </Project>

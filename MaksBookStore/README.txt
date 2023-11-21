@@ -27,13 +27,17 @@ pseudocode - start > Stop
 
 6:15 Created new Category controller
 7:02 Added two new interfaces ISP_Call and IUnitOfWork
+7:27 added new migration : 20231106023938_AddCategoryToDb.cs
 7:25 Added font awesome support and stylized two buttons Delete and Edit
 7:56 Added Update and Delete options in controller
 
 
 2023/11/20
 7:00 Started part 3 with created a CRUD with CoverType
-8:47 added new migration : 20231106023938_AddCategoryToDb.cs
+8:47 added new migration : 20231121014554_AddProductToDb.cs
+9:02 Created Product controller and added Index
+9:10 Added Interface, Upsert Page
+11:00 Finished to add Tiny.Cloud section and added two new folders
 
 Tests:
 

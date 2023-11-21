@@ -13,8 +13,9 @@ function loadDataTable() {
         "columns": [
             { "data": "name", "width": "60%" },
             {
-                "data": "ID",
+                "data": "id",
                 "render": function (data) {
+                    debugger;
                     return `
                             <div class="text-center">
                                 <a href="/Admin/CoverType/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
