@@ -1,7 +1,7 @@
-﻿@model MaksBooks.Models.Category;
+﻿@model MaksBooks.Models.CoverType;
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var title = "Create Category";
+    var title = "Create CoverType";
 }
 
 <form method="post">
@@ -9,7 +9,7 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @if (Model.Id != null)
         {
-            title = "Create Category";
+            title = "Create CoverType";
         }
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>

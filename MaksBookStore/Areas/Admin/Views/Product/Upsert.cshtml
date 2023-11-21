@@ -1,7 +1,7 @@
-﻿@model MaksBooks.Models.Category;
+﻿@model MaksBooks.Models.Product;
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var title = "Create Category";
+    var title = "Create Product";
 }
 
 <form method="post">
@@ -9,7 +9,7 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @if (Model.Id != null)
         {
-            title = "Create Category";
+            title = "Create Product";
         }
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
@@ -17,11 +17,11 @@
         <div class="col-8 pt-4">
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Name"></label>
+                    <label asp-for="Author"></label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Name" class="form-control"/>
-                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <input asp-for="Author" class="form-control" />
+                    <span asp-validation-for="Author" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row">
