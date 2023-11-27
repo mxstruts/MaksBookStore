@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MaksBooks.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231121011600_AddCoverType")]
-    partial class AddCoverTypeToDb
+    [Migration("20231127192659_AddProductToDb")]
+    partial class AddProductToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace MaksBooks.DataAccess.Migrations
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MaksBooks.Models.Category", b =>
+            modelBuilder.Entity("BulkyBook.Models.Category", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace MaksBooks.DataAccess.Migrations
                 b.ToTable("Categories");
             });
 
-            modelBuilder.Entity("MaksBooks.Models.CoverType", b =>
+            modelBuilder.Entity("BulkyBook.Models.CoverType", b =>
             {
                 b.Property<int>("Id")
                     .ValueGeneratedOnAdd()
@@ -53,6 +53,55 @@ namespace MaksBooks.DataAccess.Migrations
                 b.HasKey("Id");
 
                 b.ToTable("CoverTypes");
+            });
+
+            modelBuilder.Entity("BulkyBook.Models.Product", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int")
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                b.Property<string>("Author")
+                    .HasColumnType("nvarchar(max)");
+
+                b.Property<int>("CategoryId")
+                    .HasColumnType("int");
+
+                b.Property<int>("CoverTypeId")
+                    .HasColumnType("int");
+
+                b.Property<string>("Description")
+                    .HasColumnType("nvarchar(max)");
+
+                b.Property<string>("ISBN")
+                    .HasColumnType("nvarchar(max)");
+
+                b.Property<string>("ImageUrl")
+                    .HasColumnType("nvarchar(max)");
+
+                b.Property<double>("ListPrice")
+                    .HasColumnType("float");
+
+                b.Property<double>("Price")
+                    .HasColumnType("float");
+
+                b.Property<double>("Price100")
+                    .HasColumnType("float");
+
+                b.Property<double>("Price50")
+                    .HasColumnType("float");
+
+                b.Property<string>("Title")
+                    .HasColumnType("nvarchar(max)");
+
+                b.HasKey("Id");
+
+                b.HasIndex("CategoryId");
+
+                b.HasIndex("CoverTypeId");
+
+                b.ToTable("Products");
             });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -255,6 +304,25 @@ namespace MaksBooks.DataAccess.Migrations
                 b.ToTable("AspNetUserTokens");
             });
 
+            modelBuilder.Entity("BulkyBook.Models.Product", b =>
+            {
+                b.HasOne("BulkyBook.Models.Category", "Category")
+                    .WithMany()
+                    .HasForeignKey("CategoryId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.HasOne("BulkyBook.Models.CoverType", "CoverType")
+                    .WithMany()
+                    .HasForeignKey("CoverTypeId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.Navigation("Category");
+
+                b.Navigation("CoverType");
+            });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
             {
                 b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -309,4 +377,3 @@ namespace MaksBooks.DataAccess.Migrations
         }
     }
 }
-
