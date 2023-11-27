@@ -39,9 +39,17 @@ pseudocode - start > Stop
 9:10 Added Interface, Upsert Page
 11:00 Finished to add Tiny.Cloud section and added two new folders
 
+2023/11/27
+2:00 Created new Product Validation20231127192659_AddProductToDb20231127192659_AddProductToDb
+2:47 added new migration : 20231127192659_AddProductToDb.cs
+2:58 Changed Home controller and Others
+3:06 Added products to Home Pages
+
+
 Tests:
 
 Test 1 2023/10/30 10:16
 
 Ran the project - succesfully
 
+ <script src="https://cdn.tiny.cloud/1/zendfkpwdud3ju56tndcvqg8jxnnu1na3x9954njun7s4ye0/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
